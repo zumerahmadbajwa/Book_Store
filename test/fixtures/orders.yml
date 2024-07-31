@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_submited: 2024-07-24 14:52:52
+  total: 9.99
+  state: false
+
+two:
+  date_submited: 2024-07-24 14:52:52
+  total: 9.99
+  state: false
