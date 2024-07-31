@@ -1,16 +1,15 @@
 <div class="container-fluid w-50 shadow mt-5 rounded border p-4 bg-light" >
-  <h2 class= "text-dark">Authors List</h2>
+  <h2 class= "text-dark">Customers List</h2>
   <div class= "text-light"><hr></div>
     <div class="table-responsive">
-      <%= link_to 'New Author', new_author_path %>
+      <%= link_to 'New Customer', new_customer_path %>
       <ul>
-        <% @authors.each do |author| %>
+        <% @customers.each do |customer| %>
           <li>
-            <%= link_to author.name, author_path(author) %>
+            <%= link_to customer.name, customer_path(customer) %>
           </li>
         <% end %>
       </ul>
     </div>
   </div>
 </div>
-
