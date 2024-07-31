@@ -1,0 +1,13 @@
+<h1>Order Details</h1>
+<p>
+  Order ID: <%= @order.id %><br>
+  Placed by: <%= @order.customer.name %><br>
+</p>
+<h2>Books in this order:</h2>
+<ul>
+  <% @order.book_orders.each do |book_order| %>
+    <li>
+      <%= book_order.book.title %> - Quantity: <%= book_order.quantity %>
+    </li>
+  <% end %>
+</ul>

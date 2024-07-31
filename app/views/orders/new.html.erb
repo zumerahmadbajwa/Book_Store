@@ -1,0 +1,16 @@
+<h1>New Order</h1>
+<%= form_with model: @order, local: true do |form| %>
+  <%= form.fields_for :book_orders do |book_order_fields| %>
+    <div>
+      <%= book_order_fields.label :book_id %>
+      <%= book_order_fields.collection_select :book_id, Book.all, :id, :title %>
+    </div>
+    <div>
+      <%= book_order_fields.label :quantity %>
+      <%= book_order_fields.number_field :quantity %>
+    </div>
+  <% end %>
+  <div>
+    <%= form.submit "Place Order" %>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+<h1><%= book.title %></h1>
+<p><%= book.description %></p>
+<%= link_to 'Edit', edit_author_book_path(book.author, book) %>
+<%= link_to 'Delete', author_book_path(book.author, book), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<h2>Reviews</h2>
+<%= link_to 'New Review', new_author_book_review_path(book.author, book) %>
+<ul>
+  <% book.reviews.each do |review| %>
+    <li>
+      <%= review.rating %> stars: <%= review.comment %>
+      <%= link_to 'Delete', author_book_review_path(review.book.author, review.book, review), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+  <% end %>
+</ul>
