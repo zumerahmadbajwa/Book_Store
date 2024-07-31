@@ -1,0 +1,13 @@
+<div class="jumbotron text-center">
+  <% if user_signed_in? %> 
+    <div> Welcome <%= current_user.email %> </div> 
+    <button type="submit" class="btn btn-default">
+      <%= button_to "Sign out", destroy_user_session_path, method: :delete %> 
+    </button>
+  <% else %>
+    <button type="submit" class="btn btn-default">
+      <%= button_to "Sign in", new_user_session_path %> 
+    </button>
+  <% end %>
+  <h1>Welcome to my Book_Store</h1>
+</div>
