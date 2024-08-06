@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# class CustomerController
 class CustomersController < ApplicationController
   def new
     @customer = Customer.new

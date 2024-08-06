@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# class AuthorController
 class AuthorsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
