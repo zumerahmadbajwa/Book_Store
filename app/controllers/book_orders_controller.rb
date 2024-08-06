@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# class BookOrderController
 class BookOrdersController < ApplicationController
   before_action :authenticate_user!
 
